@@ -90,7 +90,7 @@ All images are stored in the external `assets/` directory located at the same le
 Interface for receptor and ligand entry, built using **Streamlit**.  
 Users can specify receptor names (e.g., OR1A1) and ligands (e.g., Citral), then initiate automated validation and docking.
 
-![User Input Interface](ui_input.jpeg)
+![User Input Interface](https://github.com/Atirath-Pal/Automated-Molecular-Docking/blob/6c7b229871ed45bdf45398e4c1e4c190f8e8caad/ui_input.jpg)
 
 ---
 
