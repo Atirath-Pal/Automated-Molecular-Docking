@@ -97,7 +97,7 @@ Users can specify receptor names (e.g., OR1A1) and ligands (e.g., Citral), then 
 ### 2. Workflow Diagram of the Docking Pipeline
 Flowchart showing the complete automation pipeline, including data retrieval, validation, docking, and visualization stages.
 
-![Workflow Diagram](../assets/flowchart_pipeline.png)
+![Workflow Diagram](https://github.com/Atirath-Pal/Automated-Molecular-Docking/blob/397ca159e6a52fec18d65defd79f3d1d216dfaef/flowchart_pipeline.jpg)
 
 ---
 
