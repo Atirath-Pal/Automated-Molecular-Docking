@@ -105,7 +105,7 @@ Flowchart showing the complete automation pipeline, including data retrieval, va
 Output interface displaying binding energies, standard deviations, and ranking.  
 Users can download results in `.csv` format or visualize binding poses interactively.
 
-![Docking Results](../assets/output_interface.png)
+![Docking Results](https://github.com/Atirath-Pal/Automated-Molecular-Docking/blob/7ad212c99a1face5ec5862c380b18140be485388/output_interface.png)
 
 ---
 
