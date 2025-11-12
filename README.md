@@ -129,7 +129,7 @@ The Ramachandran plot confirms stereochemical quality before proceeding to docki
 Example of the random seed docking configuration.  
 The system generates seed values automatically to enhance reproducibility and avoid bias.
 
-![Random Seed Docking](../assets/random_seed_docking.png)
+![Random Seed Docking](https://github.com/Atirath-Pal/Automated-Molecular-Docking/blob/9328cf11647e2bc5d2b3c62f9dd7efc3bcee2f9c/random_seed_docking.png)
 
 ---
 
