@@ -82,7 +82,7 @@ Designed to be user-friendly for both researchers and students new to molecular 
 
 This section presents selected screenshots that illustrate the design, workflow, and functionality of the **Automated Molecular Docking Pipeline**.
 
-All images are stored inside the `assets/` folder of the repository.
+All images are stored in the external `assets/` directory located at the same level as this project folder.
 
 ---
 
@@ -90,14 +90,14 @@ All images are stored inside the `assets/` folder of the repository.
 Interface for receptor and ligand entry, built using **Streamlit**.  
 Users can specify receptor names (e.g., OR1A1) and ligands (e.g., Citral), then initiate automated validation and docking.
 
-![User Input Interface](assets/ui_input.png)
+![User Input Interface](../assets/ui_input.jpeg)
 
 ---
 
 ### 2. Workflow Diagram of the Docking Pipeline
 Flowchart showing the complete automation pipeline, including data retrieval, validation, docking, and visualization stages.
 
-![Workflow Diagram](assets/flowchart_pipeline.png)
+![Workflow Diagram](../assets/flowchart_pipeline.png)
 
 ---
 
@@ -105,7 +105,7 @@ Flowchart showing the complete automation pipeline, including data retrieval, va
 Output interface displaying binding energies, standard deviations, and ranking.  
 Users can download results in `.csv` format or visualize binding poses interactively.
 
-![Docking Results](assets/output_interface.png)
+![Docking Results](../assets/output_interface.png)
 
 ---
 
@@ -113,7 +113,7 @@ Users can download results in `.csv` format or visualize binding poses interacti
 Visualization of the docking result in **PyMOL**, showing the receptor–ligand complex after docking.  
 Users can view binding interactions by clicking the *See Pose* button.
 
-![PyMOL Visualization](assets/pymol_visualization.png)
+![PyMOL Visualization](../assets/pymol_visualization.png)
 
 ---
 
@@ -121,7 +121,7 @@ Users can view binding interactions by clicking the *See Pose* button.
 Automated receptor model validation using **SWISS-MODEL**.  
 The Ramachandran plot confirms stereochemical quality before proceeding to docking.
 
-![Ramachandran Plot](assets/ramachandran_plot.png)
+![Ramachandran Plot](../assets/ramachandran_plot.png)
 
 ---
 
@@ -129,7 +129,7 @@ The Ramachandran plot confirms stereochemical quality before proceeding to docki
 Example of the random seed docking configuration.  
 The system generates seed values automatically to enhance reproducibility and avoid bias.
 
-![Random Seed Docking](assets/random_seed_docking.png)
+![Random Seed Docking](../assets/random_seed_docking.png)
 
 ---
 
@@ -137,32 +137,31 @@ The system generates seed values automatically to enhance reproducibility and av
 Interface for user-defined seed docking.  
 Users can enter custom seed values for advanced control of stochastic docking runs.
 
-![User Seed Docking](assets/user_seed_docking.png)
+![User Seed Docking](../assets/user_seed_docking.png)
 
 ---
 
 ### 8. Validation Results Table
 Table summarizing receptor model validation parameters (e.g., QMEAN, GMQE) as retrieved from the SWISS-MODEL server.
 
-![Validation Table](assets/validation_table.png)
+![Validation Table](../assets/validation_table.png)
 
 ---
 
 ### 9. Code Configuration Snapshot
 Snippet of the `config.py` file showing customizable paths and automation parameters.
 
-![Config.py Snapshot](assets/config_snapshot.png)
+![Config.py Snapshot](../assets/config_snapshot.png)
 
 ---
 
 ### 10. Project Folder Structure
 Overview of the organized folder structure, demonstrating modular design and code separation for maintainability.
 
-![Folder Structure](assets/folder_structure.png)
+![Folder Structure](../assets/folder_structure.png)
 
 ---
 
 ### 11. Demonstration Video
-Watch a brief demonstration of the complete docking workflow:
-
+Watch a brief demonstration of the complete docking workflow:  
 [▶️ **View Demo on YouTube**](https://youtu.be/your_demo_video_link)
