@@ -137,7 +137,7 @@ The system generates seed values automatically to enhance reproducibility and av
 Interface for user-defined seed docking.  
 Users can enter custom seed values for advanced control of stochastic docking runs.
 
-![User Seed Docking](../assets/user_seed_docking.png)
+![User Seed Docking](https://github.com/Atirath-Pal/Automated-Molecular-Docking/blob/d7dea41314ca7f9bc92cc076382ecf08cbb2e776/user_seed_docking.png)
 
 ---
 
