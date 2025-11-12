@@ -151,7 +151,7 @@ Table summarizing receptor model validation parameters (e.g., QMEAN, GMQE) as re
 ### 9. Code Configuration Snapshot
 Snippet of the `config.py` file showing customizable paths and automation parameters.
 
-![Config.py Snapshot](../assets/config_snapshot.png)
+![Config.py Snapshot](https://github.com/Atirath-Pal/Automated-Molecular-Docking/blob/59af507e6fe0306df9562b9910b868518a922f04/config_snapshot.png)
 
 ---
 
