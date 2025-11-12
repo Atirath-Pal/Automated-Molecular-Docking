@@ -158,7 +158,7 @@ Snippet of the `config.py` file showing customizable paths and automation parame
 ### 10. Project Folder Structure
 Overview of the organized folder structure, demonstrating modular design and code separation for maintainability.
 
-![Folder Structure](../assets/folder_structure.png)
+![Folder Structure](https://github.com/Atirath-Pal/Automated-Molecular-Docking/blob/b61194545261a343f671a83a621b61d52432d7c9/folder_structure.png)
 
 ---
 
