@@ -121,7 +121,7 @@ Users can view binding interactions by clicking the *See Pose* button.
 Automated receptor model validation using **SWISS-MODEL**.  
 The Ramachandran plot confirms stereochemical quality before proceeding to docking.
 
-![Ramachandran Plot](../assets/ramachandran_plot.png)
+![Ramachandran Plot](https://github.com/Atirath-Pal/Automated-Molecular-Docking/blob/534af0b55af7134241c276108938a21acb8df7d2/ramachandran_plot.png)
 
 ---
 
