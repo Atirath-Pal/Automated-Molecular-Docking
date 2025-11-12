@@ -1,214 +1,168 @@
 # 🧬 Automated Molecular Docking Pipeline using Python
 
-An end-to-end **automated molecular docking pipeline** built in **Python**, designed to simplify and accelerate the traditionally manual process of molecular docking — a crucial step in modern **drug discovery**.  
-This project automates the preparation, execution, and analysis of receptor–ligand docking using open-source tools such as **AutoDock Vina**, **Open Babel**, and **PyMOL**, and provides an intuitive **Streamlit-based user interface** for both experts and non-experts.
+[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
+[![Framework](https://img.shields.io/badge/Framework-Streamlit-ff4b4b.svg)](https://streamlit.io/)
+[![Docking Engine](https://img.shields.io/badge/Engine-AutoDock_Vina-green.svg)](https://vina.scripps.edu/)
+[![Field](https://img.shields.io/badge/Domain-Bioinformatics-lightblue.svg)](#)
+
+> **Automating Molecular Docking for Drug Discovery**  
+> A complete end-to-end pipeline that automates receptor and ligand retrieval, validation, docking, and visualization using open-source bioinformatics tools.
 
 ---
 
-## 📘 Table of Contents
-- [Introduction](#introduction)
-- [Features](#features)
-- [Tools & Technologies](#tools--technologies)
-- [Pipeline Overview](#pipeline-overview)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Folder Structure](#folder-structure)
-- [Results & Evaluation](#results--evaluation)
-- [Future Enhancements](#future-enhancements)
-- [Acknowledgements](#acknowledgements)
-- [License](#license)
+
+
+### 🔬 About the Project
+
+The **Automated Molecular Docking Pipeline** is a research-oriented Python application that integrates **AutoDock Vina**, **Open Babel**, **PyMOL**, and several bioinformatics APIs to automate the molecular docking process.  
+Designed during a research internship at **IIT Mandi (CHCi Lab)**, the project aims to make molecular docking **faster, more reliable, and accessible** — reducing manual time by over **90%** while maintaining high reproducibility and interpretability.
+
+> **Tagline:** “From sequence to docking — automated, reproducible, and researcher-friendly.”
+
+
+
+
+## 📘 Abstract / Overview
+
+The **Automated Molecular Docking Pipeline** is a research-driven project focused on simplifying and accelerating one of the most critical computational steps in modern drug discovery — *molecular docking*.  
+Molecular docking predicts how small molecules (ligands) interact with receptor proteins to form stable complexes, helping researchers identify potential drug candidates.
+
+Traditionally, this process involves multiple manual stages such as receptor and ligand preprocessing, grid generation, docking execution, and analysis — all of which are labor-intensive, time-consuming, and error-prone.
+
+This project automates the **entire docking workflow** using Python and a collection of open-source bioinformatics tools including **AutoDock Vina**, **Open Babel**, **PyMOL**, and **Biopython**. The system handles receptor and ligand retrieval, structure preparation, validation via Ramachandran plots, docking execution, and result visualization — all through an intuitive **Streamlit web interface**.
+
+The pipeline enables:
+- **Batch docking** of multiple ligands with minimal user input.
+- **Error-resilient execution** using robust logging and exception handling.
+- **Consistent and reproducible results**, eliminating human bias in parameter setup.
+
+By reducing the average docking time from **40–50 minutes to under 5 minutes**, this pipeline demonstrates a 90% efficiency improvement, making molecular docking accessible to **both experts and non-experts** in the field of computational biology.
+
+> ⚡ *Developed as part of a Research Internship at the Centre for Human Computer Interaction (CHCi), Indian Institute of Technology, Mandi — under the guidance of Prof. (Dr.) Shubhajit Roy Chowdhury.*
+
+
+## ⚙️ Key Features
+
+The automated pipeline integrates multiple bioinformatics tools and scripting modules to deliver a seamless, fully reproducible molecular docking workflow.  
+Below are its principal features:
+
+### 1. End-to-End Automation  
+Eliminates manual intervention by automating every stage of the docking process — from receptor and ligand acquisition to post-docking analysis.
+
+### 2. Database Integration  
+Directly fetches receptor and ligand structures from trusted biological databases such as **NCBI**, **PubChem**, and **SWISS-MODEL**, ensuring data accuracy and scientific validity.
+
+### 3. Model Validation  
+Performs automated structure validation using **Ramachandran plots** and stereochemical analysis to assess protein model reliability before docking.
+
+### 4. Modular Design  
+Implements a stepwise modular structure, allowing independent execution and testing of each phase — download, validation, preparation, configuration, docking, and visualization.
+
+### 5. Streamlit-Based Interface  
+Provides a clean, interactive web interface built using **Streamlit**, enabling users to perform docking experiments without command-line operations.
+
+### 6. Batch Docking Support  
+Capable of handling multiple ligands simultaneously against a single receptor, significantly enhancing throughput and reproducibility.
+
+### 7. Visualization and Reporting  
+Integrates **PyMOL** for three-dimensional visualization of binding poses and automatically generates structured reports in CSV format containing binding energies and interaction summaries.
+
+### 8. Robust Logging and Error Handling  
+Implements intermediate logs and exception-handling routines to maintain transparency, reproducibility, and reliability across runs.
+
+### 9. Performance Efficiency  
+Reduces average docking time from **40–50 minutes** (manual workflow) to **4–5 minutes**, achieving over **90% improvement** in time efficiency.
+
+### 10. Accessibility  
+Designed to be user-friendly for both researchers and students new to molecular docking, without requiring advanced domain knowledge.
+
+
+
+## Screenshots and Demonstration
+
+This section presents selected screenshots that illustrate the design, workflow, and functionality of the **Automated Molecular Docking Pipeline**.
+
+All images are stored inside the `assets/` folder of the repository.
 
 ---
 
-## 🔍 Introduction
+### 1. User Input Interface
+Interface for receptor and ligand entry, built using **Streamlit**.  
+Users can specify receptor names (e.g., OR1A1) and ligands (e.g., Citral), then initiate automated validation and docking.
 
-**Molecular docking** is a computational method used to predict how small molecules (ligands) interact with receptor proteins to form stable complexes.  
-However, manual docking is **time-consuming, error-prone**, and **difficult to scale** when dealing with large datasets.
-
-This project automates the **entire molecular docking workflow**, including:
-- Receptor and ligand retrieval from public databases.
-- Structure preparation and validation.
-- Configuration file generation.
-- Docking execution.
-- Result visualization and report generation.
-
-> 🚀 Manual docking typically takes **40–50 minutes**, while this pipeline reduces the time to **4–5 minutes** — a **90% improvement**.
+![User Input Interface](assets/ui_input.png)
 
 ---
 
-## ✨ Features
+### 2. Workflow Diagram of the Docking Pipeline
+Flowchart showing the complete automation pipeline, including data retrieval, validation, docking, and visualization stages.
 
-- 🔹 **Automatic Receptor & Ligand Download**  
-  Fetches data from **NCBI**, **PubChem**, and **SWISS-MODEL** using Biopython and Selenium.
-
-- 🔹 **Model Validation**  
-  Generates and analyzes **Ramachandran plots** to ensure receptor reliability.
-
-- 🔹 **Automated Docking Execution**  
-  Performs docking using **AutoDock Vina** with dynamic configuration files.
-
-- 🔹 **Batch Processing**  
-  Supports **multiple ligands** in one run with automated folder management and logs.
-
-- 🔹 **User-Friendly Web UI**  
-  Built using **Streamlit** for simple input, configuration, and visualization.
-
-- 🔹 **Result Visualization**  
-  Integrated **PyMOL** interface for 3D visualization of docking poses.
-
-- 🔹 **Comprehensive Outputs**  
-  Exports results as **CSV** files and visual summaries with binding affinities and energy plots.
+![Workflow Diagram](assets/flowchart_pipeline.png)
 
 ---
 
-## 🧰 Tools & Technologies
+### 3. Docking Results Output Interface
+Output interface displaying binding energies, standard deviations, and ranking.  
+Users can download results in `.csv` format or visualize binding poses interactively.
 
-| Category | Tools / Libraries |
-|-----------|------------------|
-| **Programming Language** | Python |
-| **Docking Engine** | AutoDock Vina |
-| **Structure Conversion** | Open Babel |
-| **Visualization** | PyMOL |
-| **UI Framework** | Streamlit |
-| **Automation** | Selenium, BeautifulSoup |
-| **Bioinformatics** | Biopython (Entrez), RDKit |
-| **Data Handling** | Pandas, NumPy |
-| **System Utilities** | os, subprocess, shutil, threading |
+![Docking Results](assets/output_interface.png)
 
 ---
 
-## ⚙️ Pipeline Overview
+### 4. PyMOL Visualization
+Visualization of the docking result in **PyMOL**, showing the receptor–ligand complex after docking.  
+Users can view binding interactions by clicking the *See Pose* button.
 
-The complete automated docking pipeline includes:
-
-1. **Input Collection** – User enters receptor and ligand names via UI.  
-2. **Structure Generation** – Fetches receptor FASTA sequence (NCBI), models it via SWISS-MODEL, and downloads ligand structures from PubChem.  
-3. **Validation** – Checks model quality via **Ramachandran plots** and stereochemistry analysis.  
-4. **Preparation** – Cleans and converts receptor and ligand to **PDBQT** format using Open Babel.  
-5. **Configuration Generation** – Creates config files based on docking parameters (exhaustiveness, seed, energy range).  
-6. **Docking Execution** – Runs AutoDock Vina automatically and logs results.  
-7. **Result Display** – Presents best binding poses, average energies, and provides CSV download and PyMOL visualization.
-
-> **Flowchart of the Pipeline**
-> ```
-> User Input → Structure Generation → Validation → Preparation → Config Generation → Docking → Visualization & Report
-> ```
+![PyMOL Visualization](assets/pymol_visualization.png)
 
 ---
 
-## 🧩 Installation
+### 5. Ramachandran Plot for Model Validation
+Automated receptor model validation using **SWISS-MODEL**.  
+The Ramachandran plot confirms stereochemical quality before proceeding to docking.
 
-### Prerequisites
-Install the following software and ensure their paths are configured in `config.py`:
-- [AutoDock Vina](https://vina.scripps.edu/)
-- [Open Babel](https://openbabel.org/)
-- [PyMOL](https://pymol.org/)
-- [Google Chrome + ChromeDriver](https://chromedriver.chromium.org/)
-
-### Python Dependencies
-```bash
-pip install biopython pandas numpy streamlit selenium beautifulsoup4 requests
-```
+![Ramachandran Plot](assets/ramachandran_plot.png)
 
 ---
 
-## 🚀 Usage
+### 6. Docking Configuration: Random Seed Mode
+Example of the random seed docking configuration.  
+The system generates seed values automatically to enhance reproducibility and avoid bias.
 
-1. **Run the Streamlit App**
-   ```bash
-   streamlit run app.py
-   ```
-
-2. **Input Details**
-   - Enter receptor name (e.g., `OR1A1`)
-   - Enter one or more ligands (comma-separated)
-
-3. **Validate Model**
-   - The system automatically validates the receptor using SWISS-MODEL.
-
-4. **Set Docking Parameters**
-   - Exhaustiveness (1–32)
-   - Energy Range (1–10)
-   - Number of Poses (1–20)
-   - Choose **User-Defined Seed** or **Random Seed Docking**
-
-5. **Run Docking**
-   - Click **Start Docking** and wait for results.
-
-6. **Visualize & Download**
-   - View 3D docking poses via **PyMOL**.
-   - Download results as `.csv`.
+![Random Seed Docking](assets/random_seed_docking.png)
 
 ---
 
-## 📁 Folder Structure
+### 7. Docking Configuration: User-Defined Seed Mode
+Interface for user-defined seed docking.  
+Users can enter custom seed values for advanced control of stochastic docking runs.
 
-```
-Automated_Molecular_Docking/
-│
-├── automation_code/
-│   ├── step1_download.py
-│   ├── step2_validate.py
-│   ├── step3_prepare.py
-│   ├── step4_config.py
-│   ├── step5_dock.py
-│   └── config.py
-│
-├── pages/
-│   ├── About.py
-│   └── Help.py
-│
-├── data/
-│   ├── receptors/
-│   ├── ligands/
-│   ├── results/
-│   └── logs/
-│
-├── app.py
-└── README.md
-```
+![User Seed Docking](assets/user_seed_docking.png)
 
 ---
 
-## 📊 Results & Evaluation
+### 8. Validation Results Table
+Table summarizing receptor model validation parameters (e.g., QMEAN, GMQE) as retrieved from the SWISS-MODEL server.
 
-- ⏱ **Time Efficiency:** Reduced docking time by ~90%.  
-- ✅ **Accuracy:** Output validated against known ligand–receptor pairs.  
-- 👥 **User Study:** 5 users (non-experts) successfully performed docking.  
-- ⭐ **Average Rating:** 4.5 / 5 for usability and clarity.  
-
-**Example Output:**
-| Receptor | Ligand | Binding Energy (kcal/mol) | Std. Dev. | Remarks |
-|-----------|---------|----------------------------|------------|----------|
-| OR1A1 | Citral | -6.7 | 0.2 | Stable binding |
-| OR6F1 | 4-Decenal | -7.1 | 0.3 | Strong affinity |
+![Validation Table](assets/validation_table.png)
 
 ---
 
-## 🔮 Future Enhancements
+### 9. Code Configuration Snapshot
+Snippet of the `config.py` file showing customizable paths and automation parameters.
 
-- Integrate **Machine Learning** for pre-screening ligands.  
-- Deploy on **Cloud** for high-throughput virtual screening.  
-- Support **Multi-Receptor Docking** and **ADMET prediction**.  
-- Add **3D drag-and-drop UI** and collaborative features.  
-- Integrate **Molecular Dynamics simulation** for pose refinement.
+![Config.py Snapshot](assets/config_snapshot.png)
 
 ---
 
-## 🙏 Acknowledgements
+### 10. Project Folder Structure
+Overview of the organized folder structure, demonstrating modular design and code separation for maintainability.
 
-This project was carried out as part of a **Research Internship at IIT Mandi (CHCi Lab)**  
-under the supervision of **Prof. (Dr.) Shubhajit Roy Chowdhury**, Chairperson, CHCi.
-
-**Author:** *Atirath Pal*  
-**Institution:** Government College of Engineering & Textile Technology, Serampore  
-**Year:** August 2025 
-**Mentor:** Divyanshu Bajpai Sir
-**Supervisor:** Prof. (Dr.) Shubhajit Roy Chowdhury, IIT Mandi  
+![Folder Structure](assets/folder_structure.png)
 
 ---
 
-## 📜 License
+### 11. Demonstration Video
+Watch a brief demonstration of the complete docking workflow:
 
-This project is open-source under the **MIT License**.  
-Feel free to use, modify, and build upon it with proper attribution.
+[▶️ **View Demo on YouTube**](https://youtu.be/your_demo_video_link)
