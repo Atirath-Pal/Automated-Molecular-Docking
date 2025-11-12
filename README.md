@@ -144,7 +144,7 @@ Users can enter custom seed values for advanced control of stochastic docking ru
 ### 8. Validation Results Table
 Table summarizing receptor model validation parameters (e.g., QMEAN, GMQE) as retrieved from the SWISS-MODEL server.
 
-![Validation Table](../assets/validation_table.png)
+![Validation Table](https://github.com/Atirath-Pal/Automated-Molecular-Docking/blob/b14de606190977be22089e2a22247d7305465d9e/validation_table.png)
 
 ---
 
