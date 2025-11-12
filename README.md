@@ -202,7 +202,8 @@ under the supervision of **Prof. (Dr.) Shubhajit Roy Chowdhury**, Chairperson, C
 
 **Author:** *Atirath Pal*  
 **Institution:** Government College of Engineering & Textile Technology, Serampore  
-**Year:** August 2025  
+**Year:** August 2025 
+**Mentor:** Divyanshu Bajpai Sir
 **Supervisor:** Prof. (Dr.) Shubhajit Roy Chowdhury, IIT Mandi  
 
 ---
