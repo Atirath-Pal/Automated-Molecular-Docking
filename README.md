@@ -113,7 +113,7 @@ Users can download results in `.csv` format or visualize binding poses interacti
 Visualization of the docking result in **PyMOL**, showing the receptor–ligand complex after docking.  
 Users can view binding interactions by clicking the *See Pose* button.
 
-![PyMOL Visualization](../assets/pymol_visualization.png)
+![PyMOL Visualization](https://github.com/Atirath-Pal/Automated-Molecular-Docking/blob/3fd195e811be2cda1528e24eaf16762887232290/pymol_visualization.png)
 
 ---
 
