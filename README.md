@@ -208,7 +208,7 @@ Each stage in the process is managed by independent Python modules, allowing for
    The system automatically exports results in `.csv` format and generates graphical summaries for further interpretation.
 
 
-![Workflow Diagram](flowchart_pipeline.png)
+![Workflow Diagram](https://github.com/Atirath-Pal/Automated-Molecular-Docking/blob/0963c2e06995658eb7d8179f18980b5f5bdbb0d0/workflow%20diagram.png)
 
 > *Figure 1: Workflow diagram illustrating the complete automated molecular docking pipeline — from user input and data retrieval to docking execution, visualization, and report generation.*
 
