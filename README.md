@@ -94,14 +94,7 @@ Users can specify receptor names (e.g., OR1A1) and ligands (e.g., Citral), then 
 
 ---
 
-### 2. Workflow Diagram of the Docking Pipeline
-Flowchart showing the complete automation pipeline, including data retrieval, validation, docking, and visualization stages.
-
-![Workflow Diagram](https://github.com/Atirath-Pal/Automated-Molecular-Docking/blob/397ca159e6a52fec18d65defd79f3d1d216dfaef/flowchart_pipeline.jpg)
-
----
-
-### 3. Docking Results Output Interface
+### 2. Docking Results Output Interface
 Output interface displaying binding energies, standard deviations, and ranking.  
 Users can download results in `.csv` format or visualize binding poses interactively.
 
@@ -109,15 +102,7 @@ Users can download results in `.csv` format or visualize binding poses interacti
 
 ---
 
-### 4. PyMOL Visualization
-Visualization of the docking result in **PyMOL**, showing the receptor–ligand complex after docking.  
-Users can view binding interactions by clicking the *See Pose* button.
-
-![PyMOL Visualization](https://github.com/Atirath-Pal/Automated-Molecular-Docking/blob/3fd195e811be2cda1528e24eaf16762887232290/pymol_visualization.png)
-
----
-
-### 5. Ramachandran Plot for Model Validation
+### 3. Ramachandran Plot for Model Validation
 Automated receptor model validation using **SWISS-MODEL**.  
 The Ramachandran plot confirms stereochemical quality before proceeding to docking.
 
@@ -125,7 +110,7 @@ The Ramachandran plot confirms stereochemical quality before proceeding to docki
 
 ---
 
-### 6. Docking Configuration: Random Seed Mode
+### 4. Docking Configuration: Random Seed Mode
 Example of the random seed docking configuration.  
 The system generates seed values automatically to enhance reproducibility and avoid bias.
 
@@ -133,7 +118,7 @@ The system generates seed values automatically to enhance reproducibility and av
 
 ---
 
-### 7. Docking Configuration: User-Defined Seed Mode
+### 5. Docking Configuration: User-Defined Seed Mode
 Interface for user-defined seed docking.  
 Users can enter custom seed values for advanced control of stochastic docking runs.
 
@@ -141,32 +126,16 @@ Users can enter custom seed values for advanced control of stochastic docking ru
 
 ---
 
-### 8. Validation Results Table
+### 6. Validation Results Table
 Table summarizing receptor model validation parameters (e.g., QMEAN, GMQE) as retrieved from the SWISS-MODEL server.
 
 ![Validation Table](https://github.com/Atirath-Pal/Automated-Molecular-Docking/blob/b14de606190977be22089e2a22247d7305465d9e/validation_table.png)
 
 ---
 
-### 9. Code Configuration Snapshot
-Snippet of the `config.py` file showing customizable paths and automation parameters.
-
-![Config.py Snapshot](https://github.com/Atirath-Pal/Automated-Molecular-Docking/blob/59af507e6fe0306df9562b9910b868518a922f04/config_snapshot.png)
-
----
-
-### 10. Project Folder Structure
-Overview of the organized folder structure, demonstrating modular design and code separation for maintainability.
-
-![Folder Structure](https://github.com/Atirath-Pal/Automated-Molecular-Docking/blob/b61194545261a343f671a83a621b61d52432d7c9/folder_structure.png)
-
----
-
-### 11. Demonstration Video
+### 7. Demonstration Video
 Watch a brief demonstration of the complete docking workflow:  
 [▶️ **View Demo video**](https://vimeo.com/1136320708?share=copy&fl=sv&fe=ci)
-
-
 
 
 ## Workflow / Architecture
@@ -208,7 +177,7 @@ Each stage in the process is managed by independent Python modules, allowing for
    The system automatically exports results in `.csv` format and generates graphical summaries for further interpretation.
 
 
-![Workflow Diagram](https://github.com/Atirath-Pal/Automated-Molecular-Docking/blob/0963c2e06995658eb7d8179f18980b5f5bdbb0d0/workflow%20diagram.png)
+![Workflow Diagram](https://github.com/Atirath-Pal/Automated-Molecular-Docking/blob/397ca159e6a52fec18d65defd79f3d1d216dfaef/flowchart_pipeline.jpg)
 
 > *Figure 1: Workflow diagram illustrating the complete automated molecular docking pipeline — from user input and data retrieval to docking execution, visualization, and report generation.*
 
