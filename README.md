@@ -242,7 +242,7 @@ The following table summarizes the major technologies and their respective roles
 
 - **Operating System:** Windows 10 / Linux (Ubuntu 22.04 tested)
 - **Python Version:** 3.10 or higher
-- **IDE / Editor:** VS Code or PyCharm
+- **IDE / Editor:** VS Code
 - **External Dependencies:** AutoDock Vina, Open Babel, PyMOL
 
 > *All external tools must be correctly installed and their executable paths configured in `config.py` before running the pipeline.*
