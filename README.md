@@ -165,3 +165,48 @@ Overview of the organized folder structure, demonstrating modular design and cod
 ### 11. Demonstration Video
 Watch a brief demonstration of the complete docking workflow:  
 [▶️ **View Demo video**](https://vimeo.com/1136320708?share=copy&fl=sv&fe=ci)
+
+
+
+
+## Workflow / Architecture
+
+The **Automated Molecular Docking Pipeline** operates through a sequential, modular workflow that ensures automation, reproducibility, and high efficiency.  
+Each stage in the process is managed by independent Python modules, allowing for flexibility and scalability.
+
+### Step-by-Step Workflow
+
+1. **User Input**  
+   The user specifies the receptor and ligand names through the Streamlit web interface. Multiple ligands can be provided for batch docking.
+
+2. **Data Retrieval**  
+   - Receptor data is fetched from the **NCBI** protein database.  
+   - Ligand data is downloaded from **PubChem**.  
+   - Receptor modeling and validation data are retrieved from **SWISS-MODEL**.
+
+3. **Receptor and Ligand Preparation**  
+   Using **Open Babel**, molecular structures are cleaned, protonated, and converted into `.pdbqt` format suitable for AutoDock Vina.
+
+4. **Model Validation**  
+   The receptor model is validated using **Ramachandran plots** and stereochemical quality checks to ensure proper conformation and reliability.
+
+5. **Docking Configuration**  
+   The system automatically generates configuration files for **AutoDock Vina**, setting parameters such as exhaustiveness, grid box size, and seed values (random or user-defined).
+
+6. **Docking Execution**  
+   AutoDock Vina is executed through Python subprocess automation.  
+   Docking runs are logged, and intermediate outputs (poses, energies) are stored for analysis.
+
+7. **Results Analysis**  
+   Binding affinities, RMSD values, and docking poses are analyzed and ranked.  
+   Results are compiled into structured tables and CSV reports.
+
+8. **Visualization**  
+   The best receptor–ligand complexes are visualized using **PyMOL**, displaying 3D binding interactions and orientations.
+
+9. **Report Generation**  
+   The system automatically exports results in `.csv` format and generates graphical summaries for further interpretation.
+
+---
+
+### Summary of the Execution Path
