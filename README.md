@@ -362,3 +362,15 @@ A short **user study** was conducted with **8 bioinformatics interns and researc
 
 ---
 
+
+
+## 🧾 11️⃣ Conclusion
+
+The **Automated Molecular Docking Pipeline** successfully streamlines the complete docking process — from receptor and ligand retrieval to docking and visualization — into a single, automated workflow.
+
+By integrating tools like **AutoDock Vina**, **Open Babel**, and **PyMOL** with Python-based automation, the system achieves **high accuracy**, **faster execution**, and **reproducible results**.  
+It reduces manual setup time by over **85%** while maintaining scientific reliability.
+
+This project demonstrates how automation can simplify molecular docking for researchers and students alike, making complex bioinformatics workflows accessible through an intuitive interface.
+
+> *A robust, efficient, and reproducible pipeline — turning hours of manual docking into minutes of automation.*
