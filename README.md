@@ -247,3 +247,41 @@ The following table summarizes the major technologies and their respective roles
 
 > *All external tools must be correctly installed and their executable paths configured in `config.py` before running the pipeline.*
 
+## 🔧 Installation Guide
+
+The **Automated Molecular Docking Pipeline** integrates multiple open-source bioinformatics and cheminformatics tools.  
+Follow the steps below to set up your environment and ensure smooth execution.
+
+---
+
+### 1️⃣ System Requirements
+
+| Component | Recommended Specification |
+|------------|----------------------------|
+| **Operating System** | Windows 10/11, macOS, or Ubuntu Linux |
+| **Python Version** | 3.9 or above |
+| **RAM** | Minimum 8 GB (16 GB preferred) |
+| **Storage** | ~2 GB free space |
+| **Internet Connection** | Required for data retrieval (NCBI, PubChem, SWISS-MODEL) |
+
+---
+
+### 2️⃣ Prerequisite Software
+
+#### 🧬 AutoDock Vina
+- Download: [https://vina.scripps.edu/](https://vina.scripps.edu/)
+- Extract and add the `vina` executable to your **PATH**.
+  - **Windows:** `C:\Program Files\Vina\vina.exe`
+  - **Linux/macOS:** `/usr/local/bin/vina`
+
+#### ⚗️ Open Babel
+- Handles structure cleaning and file conversion.
+- Download: [https://openbabel.org/wiki/Main_Page](https://openbabel.org/wiki/Main_Page)
+- Add `obabel` to your **PATH**.
+
+#### 🔬 PyMOL
+- Used for 3D visualization of receptor–ligand docking results.
+- Download: [https://pymol.org/](https://pymol.org/)
+- (Optional) Open-source install:
+  ```bash
+  conda install -c schrodinger pymol
