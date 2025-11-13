@@ -164,4 +164,4 @@ Overview of the organized folder structure, demonstrating modular design and cod
 
 ### 11. Demonstration Video
 Watch a brief demonstration of the complete docking workflow:  
-[▶️ **View Demo on YouTube**](https://github.com/Atirath-Pal/Automated-Molecular-Docking/blob/2c8c48e291d4aaeec3fac43c7e96cf4801cf2cd5/demo%20video.mp4)
+[▶️ **View Demo video**](https://vimeo.com/1136320708?share=copy&fl=sv&fe=ci)
