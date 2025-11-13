@@ -333,7 +333,7 @@ A short **user study** was conducted with **8 bioinformatics interns and researc
 
 
 
-## 🧾 11️⃣ Conclusion
+## 🧾 Conclusion
 
 The **Automated Molecular Docking Pipeline** successfully streamlines the complete docking process — from receptor and ligand retrieval to docking and visualization — into a single, automated workflow.
 
