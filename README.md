@@ -215,4 +215,35 @@ Each stage in the process is managed by independent Python modules, allowing for
 
 ---
 
-### Summary of the Execution Path
+
+## Tools and Technologies Used
+
+The automated molecular docking pipeline integrates multiple open-source tools, scientific libraries, and frameworks to achieve complete automation of the docking process.  
+The following table summarizes the major technologies and their respective roles in the system.
+
+| Category | Tool / Library | Purpose / Function |
+|-----------|----------------|--------------------|
+| **Programming Language** | Python 3.10+ | Core scripting language used for automation, computation, and interface logic |
+| **Docking Engine** | AutoDock Vina | Performs receptor–ligand docking and calculates binding affinities |
+| **Structure Conversion** | Open Babel | Converts molecular file formats and prepares `.pdbqt` files for docking |
+| **Visualization Tool** | PyMOL | Visualizes receptor–ligand binding poses in 3D |
+| **User Interface Framework** | Streamlit | Builds the interactive graphical web interface |
+| **Data Retrieval & Parsing** | Biopython (Entrez), BeautifulSoup, Requests | Automates downloading of biological data from NCBI, PubChem, and SWISS-MODEL |
+| **Molecular Informatics** | RDKit | Handles ligand molecular structures and performs chemical property analysis |
+| **Automation Tools** | Selenium, Subprocess | Automates web-based and local command-line operations |
+| **Data Processing** | Pandas, NumPy | Processes numerical data and manages result tables and statistics |
+| **Plotting & Reporting** | Matplotlib | Generates graphs and visual summaries of docking results |
+| **System Utilities** | OS, Shutil, Threading | Manages file handling, task parallelization, and system-level operations |
+| **Version Control** | Git & GitHub | Repository hosting and version management |
+
+---
+
+### Development Environment
+
+- **Operating System:** Windows 10 / Linux (Ubuntu 22.04 tested)
+- **Python Version:** 3.10 or higher
+- **IDE / Editor:** VS Code or PyCharm
+- **External Dependencies:** AutoDock Vina, Open Babel, PyMOL
+
+> *All external tools must be correctly installed and their executable paths configured in `config.py` before running the pipeline.*
+
