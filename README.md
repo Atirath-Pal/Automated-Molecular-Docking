@@ -289,7 +289,7 @@ Follow the steps below to set up your environment and ensure smooth execution.
 
 
 
-## 🔬 10️⃣ Results & Evaluation
+## 🔬 Results & Evaluation
 
 The **Automated Molecular Docking Pipeline** was evaluated on multiple receptors and ligands to assess accuracy, performance, and usability compared to traditional manual docking methods.
 
@@ -337,7 +337,7 @@ All docking operations were performed via the Streamlit-based automated interfac
 
 🧾 *Best docking pose (Pose 1) displayed in PyMOL with hydrogen bond interactions highlighted.*
 
-![Docking Pose Visualization](results_sample.png)
+![Docking Pose Visualization](https://github.com/Atirath-Pal/Automated-Molecular-Docking/blob/3fd195e811be2cda1528e24eaf16762887232290/pymol_visualization.png)
 
 > *Figure 1: PyMOL visualization of the best docking pose between OR1A1 and Citral, highlighting hydrogen bonding and interaction residues.*
 
@@ -362,10 +362,3 @@ A short **user study** was conducted with **8 bioinformatics interns and researc
 
 ---
 
-### 📈 Example Result Plots (Optional)
-
-If you have graphs (runtime comparison, binding energy trends, etc.), include them here:
-
-```markdown
-![Runtime Comparison Graph](runtime_comparison.png)
-![Binding Energy Distribution](binding_energy_plot.png)
